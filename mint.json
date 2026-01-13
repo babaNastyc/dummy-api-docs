@@ -11,15 +11,11 @@
   "navigation": [
     {
       "group": "Get started",
-      "pages": ["/docs/introduction", "/docs/quickstart"]
+      "pages": ["/", "/introduction", "/quickstart"]
     },
     {
       "group": "API Reference",
-      "pages": [
-        "/docs/api/overview",
-        "/docs/api/authentication",
-        "/docs/api/endpoints"
-      ]
+      "pages": ["/api/overview", "/api/authentication", "/api/endpoints"]
     }
   ]
 }
