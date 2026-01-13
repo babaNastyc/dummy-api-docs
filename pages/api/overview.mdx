@@ -1,0 +1,91 @@
+---
+title: "API Overview"
+description: "High-level overview of the Dummy API endpoints."
+---
+
+# API Overview
+
+The Dummy API provides a simple RESTful interface for managing resources. All endpoints are prefixed with `/v1`.
+
+## Base URL
+
+All API requests should be made to:
+
+```text
+https://api.example.com
+```
+
+## Authentication
+
+All API requests require authentication using a Bearer token in the Authorization header:
+
+```text
+Authorization: Bearer your_api_key_here
+```
+
+For more details, see the [Authentication](/docs/api/authentication) guide.
+
+## Endpoints
+
+### Status
+
+Check the API status and version.
+
+```text
+GET /v1/status
+```
+
+### Resources
+
+Manage resources through CRUD operations.
+
+```text
+GET    /v1/resources
+POST   /v1/resources
+GET    /v1/resources/:id
+PUT    /v1/resources/:id
+DELETE /v1/resources/:id
+```
+
+## Response Format
+
+All responses are returned in JSON format. Successful responses include the requested data:
+
+```json
+{
+  "data": { ... },
+  "meta": {
+    "timestamp": "2025-01-01T00:00:00Z"
+  }
+}
+```
+
+## Error Handling
+
+Errors are returned with appropriate HTTP status codes and error messages:
+
+```json
+{
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "The request is invalid",
+    "details": { ... }
+  }
+}
+```
+
+## Rate Limiting
+
+API requests are rate-limited to 100 requests per minute per API key. Rate limit information is included in response headers:
+
+```text
+X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 95
+X-RateLimit-Reset: 1609459200
+```
+
+## Next Steps
+
+- Learn about [Authentication](/docs/api/authentication)
+- Explore specific [Endpoints](/docs/api/endpoints)
+

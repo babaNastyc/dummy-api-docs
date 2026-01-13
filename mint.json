@@ -1,0 +1,25 @@
+{
+  "name": "Dummy API Docs",
+  "logo": "/logo.svg",
+  "favicon": "/favicon.ico",
+  "contentDir": "pages",
+  "colors": {
+    "primary": "#6366f1",
+    "light": "#eef2ff",
+    "dark": "#1e1b4b"
+  },
+  "navigation": [
+    {
+      "group": "Get started",
+      "pages": ["/docs/introduction", "/docs/quickstart"]
+    },
+    {
+      "group": "API Reference",
+      "pages": [
+        "/docs/api/overview",
+        "/docs/api/authentication",
+        "/docs/api/endpoints"
+      ]
+    }
+  ]
+}
